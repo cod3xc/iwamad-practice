@@ -3,34 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Week 02 - Profile Card</title>
+  <title>Profile Card</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body class="bg-gray-100 min-h-screen flex flex-col justify-between font-sans">
 
   <header class="bg-white border-b py-4 text-center">
-    <h1 class="text-xl font-bold text-gray-800">Student Directory</h1>
+    <h1 class="text-xl font-bold text-gray-800">My site</h1>
   </header>
 
   <main class="flex items-center justify-center p-4">
     <article class="profile-card bg-white rounded-xl shadow-md w-full max-w-sm text-center flex flex-col items-center">
-      
-      <!-- Avatar -->
       <img 
-        src="https://api.dicebear.com/7.x/bottts/svg?seed=Arslan" 
+        src="./me.jpg"
         alt="Avatar" 
         class="w-24 h-24 rounded-full mb-3 bg-gray-50 border border-gray-200"
       />
 
-      <h2 class="text-xl font-semibold text-gray-900">Arslan Zhunissov</h2>
+      <h2 class="text-xl font-semibold text-gray-900">Arslan Alisher</h2>
       <p class="text-sm text-gray-500 mb-3">IT Management Student</p>
 
       <p class="text-sm text-gray-600 mb-5 px-2">
-        3rd year undergrad passionate about databases, networks, and building practical web apps. Learning front-end layout and JS interactivity.
+        3rd year undergrad passionate about games. Love sleeping etc. Don't like hard courses please don't kill us.
       </p>
 
-      <!-- Links -->
       <div class="flex gap-3 mb-5">
         <a 
           href="https://github.com" 
@@ -47,7 +44,6 @@
         </a>
       </div>
 
-      <!-- Like Button -->
       <button 
         id="like-btn" 
         type="button" 
@@ -60,7 +56,7 @@
   </main>
 
   <footer class="py-4 text-center text-xs text-gray-400">
-    <p>IWaMAD Week 02 Practice</p>
+    <p>iwamad week 2 practice</p>
   </footer>
 
   <script type="module" src="./main.js"></script>
