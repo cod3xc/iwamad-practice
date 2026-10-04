@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { Skill, SkillBadge } from './SkillBadge';
+import { LikeButton } from './LikeButton';
 
 type LinkItem = {
   name: string;
@@ -12,7 +11,6 @@ type ProfileCardProps = {
   bio: string;
   avatarUrl?: string;
   links: LinkItem[];
-  skills: Skill[];
 };
 
 export const ProfileCard = ({
@@ -21,10 +19,7 @@ export const ProfileCard = ({
   bio,
   avatarUrl,
   links,
-  skills,
 }: ProfileCardProps) => {
-  const [isLiked, setIsLiked] = useState<boolean>(false);
-
   return (
     <article className="profile-card bg-white rounded-xl shadow-md w-full max-w-sm text-center flex flex-col items-center">
       {avatarUrl && (
@@ -42,21 +37,6 @@ export const ProfileCard = ({
         {bio}
       </p>
 
-      {/* Skills list with empty state */}
-      <div className="w-full mb-5">
-        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Skills</p>
-        {skills.length > 0 ? (
-          <div className="flex flex-wrap justify-center gap-2">
-            {skills.map((skill) => (
-              <SkillBadge key={skill.id} skill={skill} />
-            ))}
-          </div>
-        ) : (
-          <p className="text-xs text-gray-400 italic">No skills added yet.</p>
-        )}
-      </div>
-
-      {/* Links */}
       <div className="flex gap-3 mb-5">
         {links.map((link) => (
           <a
@@ -71,16 +51,7 @@ export const ProfileCard = ({
         ))}
       </div>
 
-      {/* Interactive Like Button */}
-      <button
-        type="button"
-        onClick={() => setIsLiked(!isLiked)}
-        className={`w-full py-2 px-4 rounded-lg text-sm font-medium border transition ${
-          isLiked ? 'liked' : 'border-gray-300 text-gray-700 hover:bg-gray-50'
-        }`}
-      >
-        <span>{isLiked ? '❤️' : '🤍'}</span> {isLiked ? 'Liked' : 'Like'}
-      </button>
+      <LikeButton />
     </article>
   );
 };
