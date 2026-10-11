@@ -1,0 +1,13 @@
+:root {
+  /* the ten Figma variables (slash -> dash) */
+  --color-primary: #1d4ed8;
+  --color-muted: #4b5563; /* design fix: was #9ca3af (2.54 : 1) -> #4b5563 (7.56 : 1) — CHECK old value in Figma */
+  --color-surface: #ffffff;
+  --color-text: #111827;
+  --color-border: #e5e7eb;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --radius-card: 12px;
+}
