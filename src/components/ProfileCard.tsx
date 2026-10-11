@@ -1,6 +1,5 @@
-import { LikeButton } from './LikeButton';
+﻿import { LikeButton } from './LikeButton';
 import { Card } from './ui/Card';
-import { Button } from './ui/Button';
 
 type LinkItem = { name: string; url: string };
 
@@ -22,9 +21,9 @@ export const ProfileCard = ({ name, role, bio, avatarUrl, links }: ProfileCardPr
     <p>{bio}</p>
     <div className="row">
       {links.map((link) => (
-        <Button key={link.name} href={link.url} target="_blank" rel="noreferrer">
+        <a key={link.name} className="ui-btn" href={link.url} target="_blank" rel="noreferrer">
           {link.name}
-        </Button>
+        </a>
       ))}
     </div>
     <LikeButton />

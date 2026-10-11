@@ -2,13 +2,13 @@
   --color-primary: #1d4ed8;
   --color-primary-hover: #1e40af;
   --color-text: #111827;
-  --color-text-muted: #4b5563; /* was #9ca3af (2.31:1 on bg), now 6.87:1 */
+  --color-text-muted: #4b5563;
   --color-bg: #f3f4f6;
   --color-surface: #ffffff;
   --color-border: #d1d5db;
   --color-like: #b91c1c;
   --color-like-bg: #fee2e2;
-  --color-focus: #1d4ed8;
+  --color-focus: var(--color-primary);
 
   --space-1: 0.5rem;
   --space-2: 0.75rem;
