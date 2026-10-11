@@ -1,0 +1,32 @@
+@import './styles/tokens.css';
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--color-bg); color: var(--color-text); font-size: var(--font-md); }
+h1, h2, p { margin: 0; }
+
+:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 2px; }
+
+.layout { min-height: 100vh; display: flex; flex-direction: column; }
+.main { flex: 1; display: flex; align-items: center; justify-content: center; padding: var(--space-3); }
+.footer { padding: var(--space-3); text-align: center; font-size: var(--font-sm); color: var(--color-text-muted); }
+
+.header { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: var(--space-3); display: flex; flex-direction: column; gap: var(--space-2); }
+.brand { display: flex; align-items: center; gap: var(--space-2); }
+.brand img { width: 40px; height: 40px; }
+.brand h1 { font-size: var(--font-lg); }
+.badge-likes { font-size: var(--font-sm); font-weight: 600; background: var(--color-like-bg); color: var(--color-like); padding: 0.125rem var(--space-1); border-radius: var(--radius-pill); }
+.nav { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+.nav a { padding: var(--space-1) var(--space-2); border-radius: var(--radius); font-size: var(--font-sm); font-weight: 500; color: var(--color-text-muted); text-decoration: none; }
+.nav a:hover { background: var(--color-bg); color: var(--color-text); }
+.nav a.active { background: var(--color-primary); color: var(--color-surface); }
+@media (min-width: 640px) {
+  .header { flex-direction: row; align-items: center; justify-content: space-between; padding: var(--space-3) var(--space-4); }
+}
+
+.page-card { width: 100%; max-width: 24rem; text-align: center; }
+.page-card h2 { font-size: var(--font-lg); margin-bottom: var(--space-1); }
+.muted { color: var(--color-text-muted); font-size: var(--font-sm); }
+.stack { display: flex; flex-direction: column; align-items: center; gap: var(--space-3); }
+.row { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-1); }
+.avatar { width: 6rem; height: 6rem; border-radius: 50%; object-fit: cover; border: 1px solid var(--color-border); }
+.error-code { font-size: 2.5rem; font-weight: 800; }
