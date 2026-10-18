@@ -16,7 +16,7 @@ h1, h2, p { margin: 0; }
 .brand h1 { font-size: var(--font-lg); }
 .badge-likes { font-size: var(--font-sm); font-weight: 600; background: var(--color-like-bg); color: var(--color-like); padding: 0.125rem var(--space-1); border-radius: var(--radius-pill); }
 .nav { display: flex; flex-wrap: wrap; gap: var(--space-1); }
-.nav a { padding: var(--space-1) var(--space-2); border-radius: var(--radius); font-size: var(--font-sm); font-weight: 500; color: var(--color-text-muted); text-decoration: none; }
+.nav a { padding: var(--space-1) var(--space-2); border-radius: var(--radius); font-size: var(--font-sm); font-weight: 500; color: var(--color-primary); text-decoration: none; }
 .nav a:hover { background: var(--color-bg); color: var(--color-text); }
 .nav a.active { background: var(--color-primary); color: var(--color-surface); }
 @media (min-width: 640px) {
