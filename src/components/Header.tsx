@@ -19,11 +19,9 @@ export const Header = ({ title }: HeaderProps) => {
     <header className="bg-white border-b py-4 px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div className="flex items-center gap-3">
         <h1 className="text-xl font-bold text-gray-800">{title}</h1>
-        {likes > 0 && (
-          <span className="px-2 py-0.5 text-xs font-semibold bg-rose-100 text-rose-700 rounded-full">
-            ❤️ {likes}
-          </span>
-        )}
+        <span className="px-2 py-0.5 text-xs font-semibold bg-rose-100 text-rose-700 rounded-full">
+          ♥ {likes}
+        </span>
       </div>
 
       <nav className="flex items-center gap-2">
