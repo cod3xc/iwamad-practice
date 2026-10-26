@@ -14,6 +14,7 @@ export const Header = ({ title }: { title: string }) => {
       </div>
       <nav className="nav" aria-label="Main">
         <NavLink to="/" end>Home</NavLink>
+        <NavLink to="/events">Events</NavLink>
         <NavLink to="/skills">Skills</NavLink>
         <NavLink to="/contact">Contact</NavLink>
         <NavLink to="/register">Register</NavLink>
