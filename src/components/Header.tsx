@@ -8,14 +8,14 @@ export const Header = ({ title }: { title: string }) => {
   return (
     <header className="header">
       <div className="brand">
-        <img src={logo} alt="" width={40} height={40} />
+        <img src={logo} alt="" width={32} height={32} />
         <h1>{title}</h1>
-        {likes > 0 && <span className="badge-likes">❤️ {likes}</span>}
+        <span>♥ {likes}</span>
       </div>
       <nav className="nav" aria-label="Main">
         <NavLink to="/" end>Home</NavLink>
-        <NavLink to="/events">Events</NavLink>
         <NavLink to="/skills">Skills</NavLink>
+        <NavLink to="/events">Events</NavLink>
         <NavLink to="/contact">Contact</NavLink>
         <NavLink to="/register">Register</NavLink>
       </nav>

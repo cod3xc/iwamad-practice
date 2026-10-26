@@ -1,6 +1,5 @@
-import type { HTMLAttributes } from 'react';
-import './ui.css';
+import type { ReactNode } from 'react';
 
-export const Card = ({ className, ...rest }: HTMLAttributes<HTMLElement>) => (
-  <article {...rest} className={['ui-card', className].filter(Boolean).join(' ')} />
+export const Card = ({ children }: { children: ReactNode }) => (
+  <article className="card">{children}</article>
 );

@@ -1,4 +1,4 @@
-﻿import { useLikes } from '../context/LikesContext';
+import { useLikes } from '../context/LikesContext';
 import { Button } from './ui/Button';
 
 export const LikeButton = () => {
@@ -6,12 +6,11 @@ export const LikeButton = () => {
 
   return (
     <Button
-      block
-      variant={likes > 0 ? 'like' : 'default'}
+      variant="primary"
       onClick={addLike}
       aria-label={`Like (${likes} likes)`}
     >
-      <span>{likes > 0 ? '❤️' : '🤍'}</span> {likes > 0 ? `Liked (${likes})` : 'Like Profile'}
+      ♥ {likes > 0 ? `Liked (${likes})` : 'Like Profile'}
     </Button>
   );
 };

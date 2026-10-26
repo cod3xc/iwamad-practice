@@ -11,9 +11,9 @@ export const SkillsPage = () => {
   ];
 
   return (
-    <Card className="page-card">
+    <Card>
       <h2>My Skills</h2>
-      <p className="muted" style={{ marginBottom: 'var(--space-3)' }}>Technologies &amp; frameworks I use</p>
+      <p className="muted">Technologies &amp; frameworks I use</p>
       {skills.length > 0 ? (
         <div className="row">
           {skills.map((skill) => (

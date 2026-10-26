@@ -13,7 +13,7 @@ export const EventCard = ({ event }: EventCardProps) => (
     <p>
       {event.date} · {event.place}
     </p>
-    <Tag>{event.seats} seats</Tag>
+    <Tag label={`${event.seats} seats`} />
     <p>
       <Link to={`/events/${event.id}`}>Details</Link>
     </p>

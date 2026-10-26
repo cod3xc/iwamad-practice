@@ -5,4 +5,6 @@ export type Skill = {
   label: string;
 };
 
-export const SkillBadge = ({ skill }: { skill: Skill }) => <Tag>{skill.label}</Tag>;
+export const SkillBadge = ({ skill }: { skill: Skill }) => (
+  <Tag label={skill.label} />
+);
