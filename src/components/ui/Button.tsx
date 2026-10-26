@@ -1,14 +1,10 @@
-﻿import type { ButtonHTMLAttributes } from 'react';
-import './ui.css';
+import type { ButtonHTMLAttributes } from 'react';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: 'default' | 'primary' | 'secondary' | 'like';
-  block?: boolean;
+  variant?: 'primary' | 'secondary';
 };
 
-export const Button = ({ variant = 'default', block, className = '', ...rest }: ButtonProps) => {
-  const cls = ['ui-btn', variant !== 'default' && `ui-btn--${variant}`, block && 'ui-btn--block', className]
-    .filter(Boolean)
-    .join(' ');
-  return <button type="button" {...rest} className={cls} />;
+export const Button = ({ variant = 'primary', className = '', ...rest }: ButtonProps) => {
+  const classes = ['btn', `btn-${variant}`, className].filter(Boolean).join(' ');
+  return <button type="button" className={classes} {...rest} />;
 };
