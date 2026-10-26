@@ -41,8 +41,8 @@ export const RegisterPage = () => {
     touched[field] || submitAttempted ? errors[field] : undefined;
 
   return (
-    <Card style={{ width: '100%', maxWidth: '360px' }}>
-      <h2 style={{ marginBottom: 'var(--space-3)' }}>Register</h2>
+    <Card>
+      <h2>Register</h2>
       {submitted ? (
         <p role="status">Thanks, {values.fullName.trim()}. You are registered.</p>
       ) : (

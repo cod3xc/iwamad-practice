@@ -8,6 +8,6 @@ export const Layout = () => (
     <main className="main">
       <Outlet />
     </main>
-    <Footer text="iwamad week 5 practice" />
+    <Footer text="iwamad week 6 practice" />
   </div>
 );

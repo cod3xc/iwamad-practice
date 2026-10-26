@@ -1,4 +1,4 @@
-﻿import { LikeButton } from './LikeButton';
+import { LikeButton } from './LikeButton';
 import { Card } from './ui/Card';
 
 type LinkItem = { name: string; url: string };
@@ -12,7 +12,7 @@ type ProfileCardProps = {
 };
 
 export const ProfileCard = ({ name, role, bio, avatarUrl, links }: ProfileCardProps) => (
-  <Card className="page-card stack">
+  <Card>
     {avatarUrl && <img src={avatarUrl} alt={`Photo of ${name}`} className="avatar" />}
     <div>
       <h2>{name}</h2>
@@ -21,7 +21,7 @@ export const ProfileCard = ({ name, role, bio, avatarUrl, links }: ProfileCardPr
     <p>{bio}</p>
     <div className="row">
       {links.map((link) => (
-        <a key={link.name} className="ui-btn" href={link.url} target="_blank" rel="noreferrer">
+        <a key={link.name} className="btn btn-secondary" href={link.url} target="_blank" rel="noreferrer">
           {link.name}
         </a>
       ))}

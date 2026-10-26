@@ -1,5 +1,4 @@
 import { useId, type InputHTMLAttributes } from 'react';
-import './ui.css';
 
 export type TextFieldProps = InputHTMLAttributes<HTMLInputElement> & {
   label: string;
